@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { SectionId } from '../types';
 
@@ -16,7 +17,7 @@ export const Showcase: React.FC = () => {
         {/* Background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-elastic-secondary/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-10 relative z-10">
             <div className="flex justify-between items-end mb-16">
                 <div>
                    <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tighter mb-2">

@@ -60,7 +60,7 @@ export const Navbar: React.FC = () => {
             : 'bg-transparent border-transparent py-6'
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-12 items-center">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-10 grid grid-cols-12 items-center">
           
           {/* Logo */}
           <div className="col-span-6 md:col-span-3 flex items-center">

@@ -28,7 +28,7 @@ export const About: React.FC = () => {
   useEffect(() => {
     if (!window.gsap || !window.ScrollTrigger || !sectionRef.current) return;
     
-    // Cards Animation
+    // Cards Animation Entrance
     window.gsap.fromTo(sectionRef.current.querySelectorAll('.feature-card'), 
       { y: 50, opacity: 0 },
       {
@@ -71,7 +71,7 @@ export const About: React.FC = () => {
         className="absolute -top-[20%] right-0 w-1/3 h-[140%] bg-gradient-to-l from-white/5 to-transparent pointer-events-none will-change-transform"
       ></div>
 
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-10 relative z-10">
         
         {/* Header */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 items-end border-b border-white/10 pb-12">
@@ -97,13 +97,20 @@ export const About: React.FC = () => {
             {features.map((feature, idx) => (
                 <div 
                     key={idx} 
-                    className="feature-card group bg-zinc-900/40 border border-white/5 p-8 rounded-xl backdrop-blur-sm hover:bg-zinc-800/60 hover:border-white/20 hover:-translate-y-2 transition-all duration-300 ease-out shadow-lg hover:shadow-2xl"
+                    className="feature-card group relative bg-zinc-900/40 border border-white/5 p-6 md:p-8 rounded-xl backdrop-blur-sm 
+                    hover:bg-zinc-800/80 hover:border-elastic-accent/30 
+                    hover:-translate-y-3 hover:scale-[1.02]
+                    transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
+                    shadow-lg hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
                 >
-                    <div className="w-12 h-12 rounded-lg bg-black border border-white/10 flex items-center justify-center text-white mb-6 group-hover:text-elastic-accent group-hover:border-elastic-accent transition-colors">
+                    {/* Subtle Internal Glow Gradient on Hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-elastic-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"></div>
+
+                    <div className="relative w-12 h-12 rounded-lg bg-black border border-white/10 flex items-center justify-center text-white mb-6 group-hover:text-elastic-accent group-hover:border-elastic-accent group-hover:scale-110 transition-all duration-500">
                         {feature.icon}
                     </div>
-                    <h3 className="text-xl text-white font-bold mb-3">{feature.title}</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed group-hover:text-zinc-400">
+                    <h3 className="relative text-xl text-white font-bold mb-3">{feature.title}</h3>
+                    <p className="relative text-zinc-500 text-sm leading-relaxed group-hover:text-zinc-400 transition-colors duration-300">
                         {feature.description}
                     </p>
                 </div>

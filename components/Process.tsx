@@ -33,7 +33,7 @@ export const Process: React.FC = () => {
     <section id={SectionId.PROCESS} ref={containerRef} className="py-24 bg-[#080808] relative border-y border-white/5">
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
       
-      <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 relative z-10">
            
            {/* Left: Sticky Title */}
            <div className="lg:col-span-4">
@@ -58,7 +58,7 @@ export const Process: React.FC = () => {
            {/* Right: Steps Stream */}
            <div className="lg:col-span-8 flex flex-col gap-4">
               {steps.map((step, idx) => (
-                  <div key={idx} className="process-card group flex items-start gap-6 p-8 bg-zinc-900/30 border border-white/5 rounded-xl hover:bg-zinc-900/80 hover:border-elastic-accent/30 transition-all duration-300">
+                  <div key={idx} className="process-card group flex items-start gap-6 p-6 md:p-8 bg-zinc-900/30 border border-white/5 rounded-xl hover:bg-zinc-900/80 hover:border-elastic-accent/30 transition-all duration-300">
                       <div className="font-mono text-elastic-accent/50 text-sm pt-1 group-hover:text-elastic-accent transition-colors">
                           {step.id}
                       </div>

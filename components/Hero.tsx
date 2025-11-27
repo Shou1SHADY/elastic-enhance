@@ -107,7 +107,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-radial-fade opacity-30 z-10 pointer-events-none"></div>
 
       <div className="absolute inset-0 z-20 flex items-center justify-center">
-        <div className="hero-text-container max-w-[1200px] w-full px-6 flex flex-col items-center text-center">
+        <div className="hero-text-container max-w-[1200px] w-full px-4 md:px-6 lg:px-10 flex flex-col items-center text-center">
             
             <div className="mb-6 flex items-center gap-4 animate-fade-in-up">
                <div className="h-[1px] w-12 bg-white/30"></div>

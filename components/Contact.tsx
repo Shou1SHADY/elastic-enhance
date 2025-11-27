@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { SectionId } from '../types';
 
@@ -63,11 +64,11 @@ export const Contact: React.FC = () => {
        </div>
 
        {/* --- Content Container --- */}
-       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+       <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-10 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 bg-zinc-900/30 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
              
              {/* Left: Info Console */}
-             <div className="lg:col-span-5 p-8 lg:p-12 bg-zinc-900/60 border-r border-white/5 flex flex-col justify-between relative overflow-hidden">
+             <div className="lg:col-span-5 p-6 md:p-8 lg:p-12 bg-zinc-900/60 border-r border-white/5 flex flex-col justify-between relative overflow-hidden">
                 {/* Top Shine Decoration */}
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-elastic-accent/50 to-transparent"></div>
                 
@@ -105,7 +106,7 @@ export const Contact: React.FC = () => {
              </div>
 
              {/* Right: Input Terminal */}
-             <div className="lg:col-span-7 p-8 lg:p-12 bg-[#0a0a0a]/60 relative">
+             <div className="lg:col-span-7 p-6 md:p-8 lg:p-12 bg-[#0a0a0a]/60 relative">
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
